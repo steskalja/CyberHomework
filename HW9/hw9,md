@@ -1,0 +1,91 @@
+<h1 id="week-9-homework-submission">Week 9 homework submission</h1>
+<p>Mission 1</p>
+<ol type="1">
+<li><p>Starwars.com Mail Server</p>
+<ol type="a">
+<li><p>starwars.com MX preference = 10, mail exchanger =
+aspmx2.googlemail.com</p></li>
+<li><p>starwars.com MX preference = 1, mail exchanger =
+aspmx.l.google.com</p></li>
+<li><p>starwars.com MX preference = 5, mail exchanger =
+alt1.aspx.l.google.com</p></li>
+<li><p>starwars.com MX preference = 10, mail exchanger =
+aspmx3.googlemail.com</p></li>
+<li><p>starwars.com MX preference = 5, mail exchanger =
+alt2.aspmx.l.google.com</p></li>
+</ol></li>
+<li><p>The issue is that the mail server records are pointing to the
+wrong servers and the preference waiting it wrong</p></li>
+<li><p>To fix it is should look like this</p>
+<ol type="a">
+<li><p>starwars.com MX preference = 1, mail exchanger =
+asltx.l.google.com</p></li>
+<li><p>starwars.com MX preference = 5, mail exchanger =
+asltx.2.google.com</p></li>
+</ol></li>
+</ol>
+<p>Mission 2</p>
+<ol type="1">
+<li><p>The SPF record for theforce.net:</p>
+<ol type="a">
+<li><p>theforce.net text =</p></li>
+</ol></li>
+</ol>
+<blockquote>
+<p>"v=spf1 a mx mx:smtp.secureserver.net include:aspmx.googlemail.com
+ip4:104.156.250.80 ip4:45.63.15.159 ip4:45.63.4.215"</p>
+<p>theforce.net text =</p>
+<p>"google-site-verification=XTU_We07Cux-6WCSOItl0c_WS29hzo92jPE341ckbOQ"</p>
+<p>theforce.net text =</p>
+<p>"google-site-verification=ycgY7mtk2oUZMagcffhFL_Qaf8Lc9tMRkZZSuig0d6w"</p>
+</blockquote>
+<ol start="2" type="1">
+<li><p>The reason the emails are going to spam is because their mail
+server is not an authorized address to send through
+smtp.secureserver.net</p></li>
+<li><p>A correct SPF record would be</p>
+<ol type="a">
+<li><p>theforce.net text =</p></li>
+</ol></li>
+</ol>
+<blockquote>
+<p>"v=spf1 a mx mx:smtp.secureserver.net include:aspmx.googlemail.com
+ip4:104.156.250.80 ip4:45.63.15.159 ip4:45.23.176.21"</p>
+</blockquote>
+<p>Mission 3</p>
+<ol type="1">
+<li><p><a href="http://www.theforce.net">www.theforce.net</a> cname
+points to theforce.net</p></li>
+<li><p>Resistance.theforce.net is not redirecting to theforce.net
+because there is no cname</p></li>
+<li><p>A proper record would be resistance.theforce.net canonical name =
+theforce.net</p></li>
+</ol>
+<p>Mission 4</p>
+<ol type="1">
+<li><p>The site’s ns records are the following:</p>
+<ol type="a">
+<li><p>princessleia.site nameserver = ns26.domaincontrol.com</p></li>
+<li><p>princessleia.site nameserver = ns25.domaincontrol.com</p></li>
+</ol></li>
+<li><p>To fix the problem the ns records need to be updated to
+ns2.galaxybackup.com</p></li>
+</ol>
+<p>Mission 5</p>
+<ol type="1">
+<li><p>Route from Batu to Jedda</p>
+<ol type="a">
+<li><p>Batu,(2)D,(1)C,(1)E,(1)F,(5)G,(5)O,(1)R,(8)S,(8)Jedda</p></li>
+</ol></li>
+</ol>
+<p>Mission 6</p>
+<ol type="1">
+<li><p>Mac Address: 00:13:ce:55:98:ef</p></li>
+<li><p>IP Address: 172.16.0.101</p></li>
+</ol>
+<p>Mission 7</p>
+<ol type="1">
+<li><p>Screenshot:</p></li>
+</ol>
+<p><img src="media/image1.png" style="width:7.5in;height:2.49444in"
+alt="Calendar Description automatically generated" /></p>
